@@ -1,0 +1,8 @@
+PHP (Hypertext Preprocessor) is a popular open-source server-side scripting language that is especially suited for web development. It is widely used for creating dynamic web pages and can be embedded directly into HTML.
+
+Key Points:
+- PHP is easy to learn and use, making it a popular choice for beginners and experienced developers alike.
+- It supports various databases like MySQL, PostgreSQL, and SQLite.
+- PHP code is executed on the server, and the result is returned to the browser as plain HTML.
+
+PHP was created in 1994 by Rasmus Lerdorf and has since evolved into a robust language used by millions of websites worldwide.

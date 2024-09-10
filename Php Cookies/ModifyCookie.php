@@ -3,7 +3,7 @@
 if(isset($_COOKIE["user"])) {
     setcookie("user", "Dhoni", time() + 3600, "/"); 
     echo "Cookie 'user' is modified to 'Dhoni'";
-} 
+}
 else {
     echo "Cookie 'user' does not exist";
 }
