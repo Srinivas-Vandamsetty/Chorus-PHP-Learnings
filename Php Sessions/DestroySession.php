@@ -6,10 +6,10 @@ session_start();
 <body>
 
 <?php
-// remove all session variables
+// remove all session variables.
 session_unset();
 
-// destroy the session
+// destroy the session.
 session_destroy();
 
 echo "Session variables are destroyed.";

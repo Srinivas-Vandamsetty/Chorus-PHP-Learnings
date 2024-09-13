@@ -6,7 +6,7 @@ session_start();
 <body>
 
 <?php
-// to change a session variable, just overwrite it
+// to change a session variable, just overwrite it.
 $_SESSION["name"] = "Rajesh";
 $_SESSION["favplayer"] = "Rohit";
 $_SESSION["favnumber"] = "45";

@@ -1,6 +1,6 @@
 <?php
 
-// Validate an Integer
+// Validate an Integer.
 echo "<h2>Validate an Integer</h2>";
 $integer = "777";
 
@@ -14,7 +14,7 @@ else {
 echo "<br>";
 echo "<br>";
 
-// Validate an IP Address
+// Validate an IP Address.
 echo "<h2>Validate an IP Address</h2>";
 $ip = "192.168.0.1";
 
@@ -28,7 +28,7 @@ else {
 echo "<br>";
 echo "<br>";
 
-// Validate an Email Address
+// Validate an Email Address.
 echo "<h2>Validate an Email Address</h2>";
 $email = "srinivas@gmail.com";
 
@@ -42,7 +42,7 @@ else {
 echo "<br>";
 echo "<br>";
 
-// Validate a URL
+// Validate a URL.
 echo "<h2>Validate a URL</h2>";
 $url = "http://www.google.com";
 
@@ -56,7 +56,7 @@ else {
 echo "<br>";
 echo "<br>";
 
-// Validate an Integer Within a Range
+// Validate an Integer Within a Range.
 echo "<h2>Validate an Integer Within a Range</h2>";
 
 $number = 50;
@@ -78,7 +78,7 @@ else {
 echo "<br>";
 echo "<br>";
 
-// Validate URL - Must Contain Query String
+// Validate URL - Must Contain Query String.
 echo "<h2>Validate URL - Must Contain Query String</h2>";
 $url_with_query = "http://www.google.com/?param=value";
 

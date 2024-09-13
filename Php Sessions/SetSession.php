@@ -1,5 +1,5 @@
 <?php
-// Start the session
+// Start the session.
 session_start();
 ?>
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ session_start();
 <body>
 
 <?php
-// Set session variables
+// Set session variables.
 $_SESSION["name"] = "Srinivas";
 $_SESSION["favplayer"] = "Dhoni";
 $_SESSION["favnumber"] = "7";

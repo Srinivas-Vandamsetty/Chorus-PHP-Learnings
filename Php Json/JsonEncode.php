@@ -1,6 +1,6 @@
 <?php
 
-// Associative array
+// Associative array.
 $data = [
     "name" => "Sai Srinivas",
     "email" => "srinivas@example.com",
@@ -8,14 +8,14 @@ $data = [
     "is_active" => true
 ];
 
-// Encoding the array to a JSON string
+// Encoding the array to a JSON string.
 $jsonString = json_encode($data);
 
 echo $jsonString;
 echo "<br>";
 echo "<br>";
 
-// Multidimensional array
+// Multidimensional array.
 $products = [
     [
         "id" => 1,
@@ -31,7 +31,7 @@ $products = [
     ]
 ];
 
-// Encoding the multidimensional array to a JSON string
+// Encoding the multidimensional array to a JSON string.
 $jsonString = json_encode($products);
 
 echo $jsonString;
@@ -39,7 +39,7 @@ echo $jsonString;
 echo "<br>";
 echo "<br>";
 
-// Associative array
+// Associative array.
 $data = [
     "name" => "Srinivas",
     "email" => "srnivas.vandamsetty@example.com",
@@ -47,10 +47,10 @@ $data = [
     "is_active" => true
 ];
 
-// Encoding the array to a pretty-printed JSON string
+// Encoding the array to a pretty-printed JSON string.
 $jsonString = json_encode($data, JSON_PRETTY_PRINT);
 
-// Output the JSON string
+// Output the JSON string.
 echo $jsonString;
 
 ?>

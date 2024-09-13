@@ -1,10 +1,10 @@
 <?php
-// Enable error reporting for all errors and warnings
+// Enable error reporting for all errors and warnings.
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Example of using var_dump and print_r for debugging
+// Example of using var_dump and print_r for debugging.
 function debugData($data) {
     echo "Debugging with var_dump and print_r:<br>";
     var_dump($data);
@@ -19,7 +19,7 @@ debugData($data);
 
 echo "<br>";
 
-// Database connection and error handling
+// Database connection and error handling.
 function connectToDatabase() {
     $conn = mysqli_connect('localhost', 'root', '', 'test_db');
     if (!$conn) {

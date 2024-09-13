@@ -1,18 +1,18 @@
 <?php
 
-// Original String
+// Original String.
 $string = "Hello, <strong>World!</strong>";
-$sanitizedString = filter_var($string, FILTER_SANITIZE_STRING);
+$sanitizedString = strip_tags($string);
 
-// Original Email Address
+// Original Email Address.
 $email = "srinivas<at>@gmail.com";
 $sanitizedEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-// Original URL
+// Original URL.
 $url = "http://www.example.com/?name=Srinivas Sai&age=30";
 $sanitizedUrl = filter_var($url, FILTER_SANITIZE_URL);
 
-// Output Results
+// Output Results.
 echo "Original String: $string<br>";
 echo "Sanitized String: $sanitizedString<br><br>";
 
