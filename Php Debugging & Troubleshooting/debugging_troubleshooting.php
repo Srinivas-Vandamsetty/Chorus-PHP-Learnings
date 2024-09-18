@@ -17,38 +17,10 @@ $data = ['name' => 'Alice', 'age' => 25, 'email' => 'alice@example.com'];
 debugData($data);
 
 
-echo "<br>";
+// Additional debugging checkpoints
+// 1. Check API responses by printing or logging them after making API calls.
+// 2. Use XDebug or a similar tool to step through the code to catch logical errors or exceptions.
+// 3. Check network errors or timeouts by inspecting API or database call latency.
+// 4. Use tools like Postman to verify your API and database endpoints are functioning correctly.
 
-// Database connection and error handling.
-function connectToDatabase() {
-    $conn = mysqli_connect('localhost', 'root', '', 'test_db');
-    if (!$conn) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error() . "<br>";
-        return false;
-    }
-    return $conn;
-}
-
-function fetchDataFromDatabase($conn) {
-    $query = "SELECT * FROM users";
-    $result = mysqli_query($conn, $query);
-    if (!$result) {
-        echo "Error executing query: " . mysqli_error($conn) . "<br>";
-        return;
-    }
-    while ($row = mysqli_fetch_assoc($result)) {
-        print_r($row);
-        echo "<br>";
-    }
-}
-
-function closeDatabaseConnection($conn) {
-    mysqli_close($conn);
-}
-
-$conn = connectToDatabase();
-if ($conn) {
-    fetchDataFromDatabase($conn);
-    closeDatabaseConnection($conn);
-}
 ?>
