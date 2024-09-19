@@ -8,7 +8,8 @@ if (file_exists($fileName)) {
     // Delete the file
     unlink($fileName);
     echo "File deleted successfully.";
-} else {
+}
+else {
     echo "File not found.";
 }
 

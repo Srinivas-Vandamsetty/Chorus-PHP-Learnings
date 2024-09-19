@@ -10,7 +10,8 @@ if (file_exists($filePath)) {
 
     // Display the file size
     echo "The file '{$filename}' exists and its size is {$fileSize} bytes.";
-} else {
+}
+else {
     // Display an error message if the file does not exist
     echo "The file '{$filename}' does not exist.";
 }

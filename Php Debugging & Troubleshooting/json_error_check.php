@@ -15,7 +15,8 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     // Output decoding error and troubleshooting tips.
     echo "JSON Error: " . json_last_error_msg() . "<br>";
     echo "Tip: Check for missing brackets, quotes, or other structural issues in the JSON.<br>";
-} else {
+} 
+else {
     // Step 4: Display decoded data.
     echo "Decoded JSON data:<br>";
     echo '<pre>' . print_r($data, true) . '</pre>';
