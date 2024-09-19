@@ -1,61 +1,69 @@
 <?php
 
+// Function to divide numbers with exception handling for division by zero.
 function divide($numerator, $denominator) {
     if ($denominator === 0) {
-        // Throwing an exception when the denominator is zero.
-        throw new Exception("Division by zero is not allowed.");
+        throw new Exception("Error: Division by zero.");
     }
     return $numerator / $denominator;
 }
 
+// Handle division and catch exceptions
 try {
-    echo divide(10, 2);
-    echo divide(10, 0);
+    echo divide(10, 2) . "<br>";
+    echo divide(10, 0) . "<br>";
 } catch (Exception $e) {
-    // Catching the exception and displaying the error message.
-    echo "Caught exception: " . $e->getMessage();
+    echo "Caught exception: " . $e->getMessage() . "<br>"
+       . "In file: " . $e->getFile() . "<br>"
+       . "On line: " . $e->getLine() . "<br>";
 }
 
 echo "<br>";
 
-// Defining a custom exception class
+// Custom exception class for invalid input.
 class InvalidInputException extends Exception {}
 
+// Function to validate age with custom exception for negative values.
 function validateAge($age) {
     if ($age < 0) {
-        // Throwing a custom exception if the input is invalid.
-        throw new InvalidInputException("Age cannot be negative.");
+        throw new InvalidInputException("Error: Age cannot be negative.");
     }
-    return "Valid age: $age";
+    return "Valid age: $age<br>";
 }
 
+// Handle age validation and catch exceptions
 try {
     echo validateAge(25);
     echo validateAge(-5);
 } catch (InvalidInputException $e) {
-    // Catching the custom exception.
-    echo "Caught custom exception: " . $e->getMessage();
+    echo "Caught custom exception: " . $e->getMessage() . "<br>"
+       . "In file: " . $e->getFile() . "<br>"
+       . "On line: " . $e->getLine() . "<br>";
 } catch (Exception $e) {
-    // Catching any other exceptions.
-    echo "Caught general exception: " . $e->getMessage();
+    echo "Caught general exception: " . $e->getMessage() . "<br>"
+       . "In file: " . $e->getFile() . "<br>"
+       . "On line: " . $e->getLine() . "<br>";
 }
 
 echo "<br>";
 
+// Function to read file contents with exception handling for non-existent files.
 function readFileContent($fileName) {
     if (!file_exists($fileName)) {
-        // Throwing an exception if the file does not exist.
-        throw new Exception("File not found.");
+        throw new Exception("Error: File not found.");
     }
     return file_get_contents($fileName);
 }
 
+// Handle file reading and catch exceptions
 try {
     echo readFileContent("example.txt");
 } catch (Exception $e) {
-    echo "Caught exception: " . $e->getMessage();
+    echo "Caught exception: " . $e->getMessage() . "<br>"
+       . "In file: " . $e->getFile() . "<br>"
+       . "On line: " . $e->getLine() . "<br>";
 } finally {
-    echo "\nFinished execution."; 
+    echo "Finished execution.<br>";
 }
 
 ?>
