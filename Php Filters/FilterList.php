@@ -4,9 +4,9 @@
     <td>Filter ID</td>
   </tr>
   <?php
-  // The filter_list() function can be used to list what the PHP filter extension offers.
-  foreach (filter_list() as $id =>$filter) {
-    echo '<tr><td>' . $filter . '</td><td>' . filter_id($filter) . '</td></tr>';
+  // Use the filter_list() function to list available PHP filters
+  foreach (filter_list() as $filter_id => $filter_name) {
+    echo '<tr><td>' . htmlspecialchars($filter_name) . '</td><td>' . filter_id($filter_name) . '</td></tr>';
   }
   ?>
 </table>

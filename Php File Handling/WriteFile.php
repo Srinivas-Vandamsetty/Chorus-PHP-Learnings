@@ -1,20 +1,25 @@
 <?php
 
 // File to write to
-$fileName = 'data.txt';
+$file_name = 'data.txt';
 
 // Content to write
 $content = "Hello, this is a test file.\nWriting to a file in PHP.";
 
 // Open the file in write mode
-$file = fopen($fileName, 'w');
+$file = fopen($file_name, 'w');
 
-// Write the content to the file
-fwrite($file, $content);
+// Check if the file opened successfully
+if ($file) {
+    // Write the content to the file
+    fwrite($file, $content);
 
-// Close the file
-fclose($file);
+    // Close the file
+    fclose($file);
 
-echo "Content written to the file successfully.";
-
+    echo "Content written to the file successfully.";
+}
+else {
+    echo "Failed to open the file for writing.";
+}
 ?>

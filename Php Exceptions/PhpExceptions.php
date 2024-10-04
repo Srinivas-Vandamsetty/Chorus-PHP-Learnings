@@ -1,17 +1,17 @@
 <?php
 
 // Function to divide numbers with exception handling for division by zero.
-function divide($numerator, $denominator) {
+function divide_numbers($numerator, $denominator) {
     if ($denominator === 0) {
         throw new Exception("Error: Division by zero.");
     }
     return $numerator / $denominator;
 }
 
-// Handle division and catch exceptions
+// Handle division and catch exceptions.
 try {
-    echo divide(10, 2) . "<br>";
-    echo divide(10, 0) . "<br>";
+    echo divide_numbers(10, 2) . "<br>";
+    echo divide_numbers(10, 0) . "<br>";
 } catch (Exception $e) {
     echo "Caught exception: " . $e->getMessage() . "<br>"
        . "In file: " . $e->getFile() . "<br>"
@@ -24,17 +24,17 @@ echo "<br>";
 class InvalidInputException extends Exception {}
 
 // Function to validate age with custom exception for negative values.
-function validateAge($age) {
+function validate_age($age) {
     if ($age < 0) {
         throw new InvalidInputException("Error: Age cannot be negative.");
     }
     return "Valid age: $age<br>";
 }
 
-// Handle age validation and catch exceptions
+// Handle age validation and catch exceptions.
 try {
-    echo validateAge(25);
-    echo validateAge(-5);
+    echo validate_age(25);
+    echo validate_age(-5);
 } catch (InvalidInputException $e) {
     echo "Caught custom exception: " . $e->getMessage() . "<br>"
        . "In file: " . $e->getFile() . "<br>"
@@ -48,16 +48,16 @@ try {
 echo "<br>";
 
 // Function to read file contents with exception handling for non-existent files.
-function readFileContent($fileName) {
-    if (!file_exists($fileName)) {
+function read_file_content($file_name) {
+    if (!file_exists($file_name)) {
         throw new Exception("Error: File not found.");
     }
-    return file_get_contents($fileName);
+    return file_get_contents($file_name);
 }
 
-// Handle file reading and catch exceptions
+// Handle file reading and catch exceptions.
 try {
-    echo readFileContent("example.txt");
+    echo read_file_content("example.txt");
 } catch (Exception $e) {
     echo "Caught exception: " . $e->getMessage() . "<br>"
        . "In file: " . $e->getFile() . "<br>"

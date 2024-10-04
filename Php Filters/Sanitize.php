@@ -1,25 +1,25 @@
 <?php
 
 // Original String.
-$string = "Hello, <strong>World!</strong>";
-$sanitizedString = strip_tags($string);
+$original_string = "Hello, <strong>World!</strong>";
+$sanitized_string = strip_tags($original_string);
 
 // Original Email Address.
-$email = "srinivas<at>@gmail.com";
-$sanitizedEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+$original_email = "srinivas<at>@gmail.com";
+$sanitized_email = filter_var($original_email, FILTER_SANITIZE_EMAIL);
 
 // Original URL.
-$url = "http://www.example.com/?name=Srinivas Sai&age=30";
-$sanitizedUrl = filter_var($url, FILTER_SANITIZE_URL);
+$original_url = "http://www.example.com/?name=Srinivas Sai&age=30";
+$sanitized_url = filter_var($original_url, FILTER_SANITIZE_URL);
 
 // Output Results.
-echo "Original String: $string<br>";
-echo "Sanitized String: $sanitizedString<br><br>";
+echo "Original String: $original_string<br>";
+echo "Sanitized String: $sanitized_string<br><br>";
 
-echo "Original Email: $email<br>";
-echo "Sanitized Email: $sanitizedEmail<br><br>";
+echo "Original Email: $original_email<br>";
+echo "Sanitized Email: $sanitized_email<br><br>";
 
-echo "Original URL: $url<br>";
-echo "Sanitized URL: $sanitizedUrl<br>";
+echo "Original URL: $original_url<br>";
+echo "Sanitized URL: $sanitized_url<br>";
 
 ?>

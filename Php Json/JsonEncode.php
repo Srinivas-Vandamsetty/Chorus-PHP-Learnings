@@ -9,11 +9,10 @@ $data = [
 ];
 
 // Encoding the array to a JSON string.
-$jsonString = json_encode($data);
+$json_string = json_encode($data);
 
-echo $jsonString;
-echo "<br>";
-echo "<br>";
+echo $json_string;
+echo "<br><br>";
 
 // Multidimensional array.
 $products = [
@@ -32,12 +31,10 @@ $products = [
 ];
 
 // Encoding the multidimensional array to a JSON string.
-$jsonString = json_encode($products);
+$json_string = json_encode($products);
 
-echo $jsonString;
-
-echo "<br>";
-echo "<br>";
+echo $json_string;
+echo "<br><br>";
 
 // Associative array.
 $data = [
@@ -48,9 +45,9 @@ $data = [
 ];
 
 // Encoding the array to a pretty-printed JSON string.
-$jsonString = json_encode($data, JSON_PRETTY_PRINT);
+$json_string = json_encode($data, JSON_PRETTY_PRINT);
 
 // Output the JSON string.
-echo $jsonString;
+echo $json_string;
 
 ?>

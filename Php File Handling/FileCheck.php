@@ -1,13 +1,12 @@
 <?php
 // Define the file path
-$filePath = "C:\\xampp\\htdocs\\Php-Learnings\\Php File Handling\\filehandling.txt";
-$filename = 'filefandling.txt';
+$file_path = "C:\\xampp\\htdocs\\Php-Learnings\\Php File Handling\\filehandling.txt";
 
 // Check if the file exists
-if (file_exists($filePath)) {
-    echo "The file '{$filename}' exists.";
+if (file_exists($file_path)) {
+    echo "The file 'filehandling.txt' exists.";
 }
 else {
-    echo "The file '{$filename}' does not exist.";
+    echo "The file 'filehandling.txt' does not exist.";
 }
 ?>
